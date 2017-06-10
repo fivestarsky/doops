@@ -2,13 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Doops</title>
+  <title>Doops - DevOps Template With AngularJS 4</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="../node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Pace Loading Process Bar -->
+  <script src="assets/vendor/pace-1.0.2/pace.min.js"></script>
+  <link href="assets/vendor/pace-1.0.2/themes/green/pace-theme-flash.css" rel="stylesheet" />
+  
+  <style type="text/css">
+    .pace .pace-progress {
+      background: green;
+    }
+  </style>
+
+  <script type="text/javascript">
+    window.paceOptions = {
+      document: true,
+      eventLag: true,
+      restartOnPushState: true,
+      restartOnRequestAfter: true,
+      ajax: {
+        trackMethods: [ 'POST','GET' ]
+      }
+    };
+  </script>
+ 
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="loading"></div>
+  </app-root>
 </body>
 </html>
